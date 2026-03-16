@@ -16,14 +16,14 @@ class Person:
         print(f"Привет, меня зовут {self.name}. Моя профессия {self.occupation}. У меня {edu} высшее образование.")
 
 class Classmate(Person):
-    def __init__(self, name, birth_date, occupation, higher_education, group):
+    def __init__(self, name, birth_date, occupation, higher_education, group_name):
         super().__init__(name, birth_date, occupation, higher_education)
-        self.group = group
+        self.group_name = group_name
 
     def introduce(self):
         edu = "есть" if self.higher_education else "нет"
         print(f"Привет, меня зовут {self.name}. Моя профессия {self.occupation}. "
-              f"Я учился с Азаматом в группе {self.group}. У меня {edu} высшее образование.")
+              f"Я учился с Айсулуу в группе {self.group_name}. У меня {edu} высшее образование.")
 
 class Friend(Person):
     def __init__(self, name, birth_date, occupation, higher_education, hobby):
@@ -34,6 +34,7 @@ class Friend(Person):
         edu = "есть" if self.higher_education else "нет"
         print(f"Привет, меня зовут {self.name}. Моя профессия {self.occupation}. "
               f"Мое хобби {self.hobby}. У меня {edu} высшее образование.")
+
 
 classmate_1 = Classmate("Арген", "12.03.2001", "студент", True, "11A")
 friend_1 = Friend("Максим", "27.05.2003", "студент", True, "баскетбол")
